@@ -3,7 +3,7 @@ module.exports = {
     title: `WordPress Gatsby Starter`,
     author: `Justin W Hall`,
     description: `A Gatsby WordPress Starter with special love for Netlify`,
-    siteUrl: `https://goofy-davinci-aed2b9.netlify.app`,
+    siteUrl: `http://goofy-davinci-aed2b9.netlify.app`,
     social: {
       twitter: `justinwhall`,
     },
@@ -29,18 +29,18 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'gatsbynetliflydemo.justinwhall.com',
+        baseUrl: 'http://goofy-davinci-aed2b9.netlify.app',
         // baseUrl: 'data.justinwhall.com',
         // baseUrl: 'wpgatsby.wtf',
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
-        protocol: 'https',
+        protocol: 'http',
         // Use 'Advanced Custom Fields' Wordpress plugin
-        useACF: false,
+        useACF: true,
         auth: {},
         // Set to true to debug endpoints on 'gatsby build'
-        verboseOutput: true,
+        verboseOutput: false,
         excludedRoutes: [
           "/*/*/comments",
           "/yoast/**",
