@@ -53,28 +53,38 @@ export const pageQuery = graphql`
       }
     }
     allWordpressPost(
-       filter: {
-         fields: {
-           deploy: {eq: true}
-         }
-       }
-        limit: 100
-      ) {
+       ) {
       edges {
         node {
-          date(formatString: "MMMM DD, YYYY")
-          slug
-          title
-          excerpt
-          id
           featured_media {
             source_url
+          }
+          author {
+            name
+            avatar_urls {
+              wordpress_24
+              wordpress_48
+              wordpress_96
+            }
+          }
+          date
+          slug
+          title
+          modified
+          excerpt
+          id
+          acf {
+            project
+            date
           }
           categories {
             name
           }
+          tags {
+            name
+          }
+          content
         }
       }
-    }
   }
 `
